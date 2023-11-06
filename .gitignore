@@ -1,0 +1,5 @@
+__pycache__
+data/CRBD/*
+!data/CRBD/Images
+data/CRBD/Images/imageClassification.txt
+data/CRBD/Images/imageClassificationTMGEM.txt
