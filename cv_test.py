@@ -41,7 +41,7 @@ for bottom in range(width):
     
     # if best_count[bottom] > 60:
     # mask[best_rr, best_cc] = best_count[bottom]
-    # img[best_rr, best_cc] = (0, 0, best_count[bottom]*2)
+    img[best_rr, best_cc] = (0, 0, best_count[bottom]*2)
     # print(best_count[bottom])
 
 peaks = argrelextrema(savgol_filter(best_count, 10, 3), np.greater, order=20)
@@ -73,3 +73,9 @@ cv.imshow("mask", mask)
 # plt.show()
 
 k = cv.waitKey(0)  # Wait for a keystroke in the window
+
+
+
+
+# for bottompoint, toppoint in enumerate(top):
+#     cv.line(img, (bottompoint, height - 1), (int(toppoint), 0), (0,0,count[bottompoint]*260), 1)
